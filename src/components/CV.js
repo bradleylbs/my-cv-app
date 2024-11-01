@@ -92,30 +92,6 @@ const CV = () => {
         'Resolved technical challenges swiftly to maintain network stability, enhancing reliability by 20%.',
         'Executed comprehensive testing and tracing, achieving optimal connectivity for all user segments.'
       ]
-    },
-    {
-      title: 'Web Developer',
-      company: 'SD Creative',
-      period: '2022/05 - 2023/02',
-      location: 'Remote',
-      responsibilities: [
-        'Developed responsive, user-focused web applications using HTML, CSS, and JavaScript, elevating client satisfaction.',
-        'Enhanced site performance by 30% through efficient code and asset optimization.',
-        'Delivered 15+ high-quality web applications with a client satisfaction rate of 95%, improving engagement and user experience.'
-      ]
-    },
-    {
-      title: 'Data Science Intern',
-      company: 'Human Science Research Council',
-      period: '2017/07 - 2017/12',
-      location: 'Durban, KwaZulu-Natal',
-      responsibilities: [
-        'Managed lab stock levels, ensuring seamless workflow for ongoing research projects and efficient resource use.',
-        'Analyzed data using advanced Excel, including pivot tables, to effectively present research findings to stakeholders.',
-        'Developed conditional surveys on Mobenzi, optimizing data collection and improving data quality.',
-        'Played a key role in QA and QC processes for research data, upholding accuracy and adherence to research protocols.',
-        'Managed archival of historical research data, contributing to streamlined data retrieval for future projects.'
-      ]
     }
   ];
 
@@ -131,12 +107,6 @@ const CV = () => {
       institution: 'Mangosuthu University of Technology',
       period: '2014 - 2017',
       location: 'Umlazi, KwaZulu-Natal'
-    },
-    {
-      degree: 'National Senior Certificate',
-      institution: 'Sparks Estate Secondary',
-      period: '2009 - 2012',
-      location: 'Sydenham, KwaZulu-Natal'
     }
   ];
 
@@ -150,11 +120,6 @@ const CV = () => {
       { name: 'HTML/CSS', level: 85, projects: 20 },
       { name: 'JavaScript', level: 80, projects: 18 },
       { name: 'React', level: 75, projects: 8 }
-    ],
-    'Data Science': [
-      { name: 'Python', level: 75, projects: 6 },
-      { name: 'Excel Analytics', level: 85, projects: 15 },
-      { name: 'Data Analysis', level: 80, projects: 12 }
     ]
   };
 
@@ -230,13 +195,13 @@ const CV = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Enhanced Header */}
       <div className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-between items-center p-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="flex justify-between items-center py-4">
             <div>
               <h1 className="text-2xl font-bold text-blue-600">Swelihle Bradley Lucas</h1>
               <p className="text-gray-600">Power Platform Developer & Digital Solutions Expert</p>
             </div>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
               <Download className="w-4 h-4" />
               Download CV
             </button>
@@ -244,8 +209,8 @@ const CV = () => {
         </div>
       </div>
 
-      {/* Sidebar for Navigation */}
-      <aside className="fixed left-0 top-20 p-4 w-40 bg-white shadow-lg rounded-r-lg z-40">
+      {/* Sidebar for larger screens, Bottom Nav for mobile */}
+      <aside className="fixed left-0 top-20 p-4 w-40 bg-white shadow-lg rounded-r-lg z-40 hidden md:block">
         <ScrollLink to="hero" smooth duration={500} className="block mb-4 cursor-pointer">Profile</ScrollLink>
         <ScrollLink to="experience" smooth duration={500} className="block mb-4 cursor-pointer">Experience</ScrollLink>
         <ScrollLink to="education" smooth duration={500} className="block mb-4 cursor-pointer">Education</ScrollLink>
@@ -258,13 +223,13 @@ const CV = () => {
           <div 
             id="hero"
             data-animate
-            className={`bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl text-white p-12 mb-8 shadow-lg transform transition-all duration-1000 ${
+            className={`bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl text-white p-8 md:p-12 mb-8 shadow-lg transform transition-all duration-1000 ${
               isVisible['hero'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
             }`}
           >
             <div className="max-w-3xl">
-              <h1 className="text-5xl font-bold mb-4">Digital Transformation Specialist</h1>
-              <p className="text-xl mb-8 opacity-90">
+              <h1 className="text-3xl md:text-5xl font-bold mb-4">Digital Transformation Specialist</h1>
+              <p className="text-lg md:text-xl mb-8 opacity-90">
                 Driving business efficiency through innovative Power Platform solutions and modern web technologies
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
@@ -319,7 +284,7 @@ const CV = () => {
         </Element>
       </div>
 
-      {/* Enhanced Footer */}
+      {/* Footer */}
       <footer className="mt-12 bg-white border-t">
         <div className="max-w-6xl mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -357,6 +322,14 @@ const CV = () => {
           </div>
         </div>
       </footer>
+
+      {/* Bottom Navigation for Mobile */}
+      <nav className="fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 flex justify-around items-center md:hidden">
+        <ScrollLink to="hero" smooth duration={500} className="text-blue-600">Profile</ScrollLink>
+        <ScrollLink to="experience" smooth duration={500} className="text-blue-600">Experience</ScrollLink>
+        <ScrollLink to="education" smooth duration={500} className="text-blue-600">Education</ScrollLink>
+        <ScrollLink to="skills" smooth duration={500} className="text-blue-600">Skills</ScrollLink>
+      </nav>
     </div>
   );
 };
