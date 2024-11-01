@@ -92,7 +92,21 @@ const CV = () => {
         'Resolved technical challenges swiftly to maintain network stability, enhancing reliability by 20%.',
         'Executed comprehensive testing and tracing, achieving optimal connectivity for all user segments.'
       ]
-    }
+    },
+    {
+      title: 'Data Science Intern',
+      company: 'Human Science Research Council',
+      period: '2017/07 - 2017/12',
+      location: 'Durban, KwaZulu-Natal',
+      responsibilities: [
+        'Managed lab stock levels, ensuring seamless workflow for ongoing research projects and efficient resource use.',
+        'Analyzed data using advanced Excel, including pivot tables, to effectively present research findings to stakeholders.',
+        'Developed conditional surveys on Mobenzi, optimizing data collection and improving data quality.',
+        'Played a key role in QA and QC processes for research data, upholding accuracy and adherence to research protocols.',
+        'Managed archival of historical research data, contributing to streamlined data retrieval for future projects.'
+      ]
+    },
+
   ];
 
   const education = [
@@ -107,6 +121,12 @@ const CV = () => {
       institution: 'Mangosuthu University of Technology',
       period: '2014 - 2017',
       location: 'Umlazi, KwaZulu-Natal'
+    },
+    {
+      degree: 'National Senior Certificate',
+      institution: 'Sparks Estate Secondary',
+      period: '2009 - 2012',
+      location: 'Sydenham, KwaZulu-Natal'
     }
   ];
 
